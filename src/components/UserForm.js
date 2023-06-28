@@ -6,7 +6,7 @@ const UserForm = () => {
     const [name, setName] = useState('')
     const [age, setAge] = useState(0)
     const [gender, setGender] = useState('')
-    const userData = useSelector(state => state)
+    const userData = useSelector(state => state.user)
     const dispatch = useDispatch()
 
     const handleSubmit = (event) => {

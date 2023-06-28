@@ -1,4 +1,10 @@
-import {legacy_createStore as createStore} from "redux";
+import {combineReducers, legacy_createStore as createStore} from "redux";
 import {userReducer} from "./userReducer";
+import {todosReducer} from "./todosReducer";
 
-export default createStore(userReducer)
+const rootReducer = combineReducers({
+    user: userReducer,
+    todos: todosReducer
+})
+
+export default createStore(rootReducer)
